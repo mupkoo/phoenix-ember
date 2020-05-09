@@ -13,17 +13,6 @@ defmodule PhxEmberWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", PhxEmberWeb do
-    pipe_through :browser
-
-    get "/", PageController, :index
-  end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", PhxEmberWeb do
-  #   pipe_through :api
-  # end
-
   # Enables LiveDashboard only for development
   #
   # If you want to use the LiveDashboard in production, you should put
@@ -39,4 +28,16 @@ defmodule PhxEmberWeb.Router do
       live_dashboard "/dashboard", metrics: PhxEmberWeb.Telemetry
     end
   end
+
+  scope "/", PhxEmberWeb do
+    pipe_through :browser
+
+    get "/", PageController, :index
+    get "/*glob", PageController, :index
+  end
+
+  # Other scopes may use custom stacks.
+  # scope "/api", PhxEmberWeb do
+  #   pipe_through :api
+  # end
 end
