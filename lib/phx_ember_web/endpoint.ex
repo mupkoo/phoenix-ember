@@ -20,10 +20,7 @@ defmodule PhxEmberWeb.Endpoint do
   #
   # You should set gzip to true if you are running phx.digest
   # when deploying your static files in production.
-  plug Plug.Static,
-    at: "/",
-    from: "./frontend/dist",
-    gzip: false
+  plug Plug.Static, at: "/", from: "./frontend/main/dist", gzip: false
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
