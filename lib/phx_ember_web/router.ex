@@ -29,6 +29,13 @@ defmodule PhxEmberWeb.Router do
     end
   end
 
+  scope "/admin", PhxEmberWeb do
+    pipe_through :browser
+
+    get "/", AdminController, :index
+    get "/*glob", AdminController, :index
+  end
+
   scope "/", PhxEmberWeb do
     pipe_through :browser
 
