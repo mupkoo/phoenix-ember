@@ -19,13 +19,7 @@ config :phx_ember, PhxEmberWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
-  check_origin: false,
-  watchers: [
-    yarn: [
-      "build:dev",
-      cd: Path.expand("../frontend", __DIR__)
-    ]
-  ]
+  check_origin: false
 
 # ## SSL Support
 #
