@@ -22,7 +22,7 @@ defmodule PhxEmberWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: "./priv/static",
+    from: "./frontend/dist",
     gzip: false
 
   # Code reloading can be explicitly enabled under the

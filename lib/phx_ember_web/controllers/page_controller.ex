@@ -3,7 +3,7 @@ defmodule PhxEmberWeb.PageController do
 
   def index(conn, _params) do
     content =
-      "./priv/static/index.html"
+      "./frontend/dist/index.html"
       |> File.read!()
       |> String.replace(
         "</head>",

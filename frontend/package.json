@@ -11,8 +11,8 @@
     "test": "tests"
   },
   "scripts": {
-    "build": "ember build --environment=production -o ../priv/static",
-    "build:dev": "ember build -w -dev -o ../priv/static",
+    "build": "ember build",
+    "build:dev": "ember build -w -dev",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
